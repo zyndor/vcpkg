@@ -11,7 +11,6 @@ set(VCPKG_BUILD_SHARED_LIBS OFF)
 vcpkg_configure_cmake(
     SOURCE_PATH "${SOURCE_PATH}/build"
     PREFER_NINJA
-    OPTIONS -DUSE_VCPKG=1
 )
 
 vcpkg_install_cmake()
