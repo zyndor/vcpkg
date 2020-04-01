@@ -1,14 +1,11 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
-    REPO assimp/assimp
-    REF v5.0.0
-    SHA512 0f73b6e961cd8455d6b6c8c10ed8b99485d846c96377b5d4fcc3b83f737647207c1306aa3dd51dad9654fbfa61bfe1119b34646f90288ae7ecab45efa6fa418a
+    REPO zyndor/assimp
+    REF 87e2d3a54de9379675d0cf8899ebd1e2db750902
+    SHA512 9ecf8e1ca0c8decc72944e35a0e346aeb97cec186a2c00bae8533e2809a6b07df40d318c6fd485ac08b0a2c2c2a6ab008ea32d4b91d13e08bac788dbe784dd8a
     HEAD_REF master
     PATCHES
         uninitialized-variable.patch
-        fix-static-build-error.patch
-        cmake-policy.patch
-        fix_minizip.patch
 )
 
 file(REMOVE ${SOURCE_PATH}/cmake-modules/FindZLIB.cmake)
