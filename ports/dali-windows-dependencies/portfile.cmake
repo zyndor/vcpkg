@@ -1,8 +1,8 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO dalihub/windows-dependencies
-    REF a9e188a01485d558051ceb9417c91c7870208f35
-    SHA512 ebb8296545feb744b8d20e010cbdd1a08fbcea8e5c1793cb5aa2b60c66cef640d0f2e5be8fb7a29c9ca53fdb2f901196df00c22ae3d16d16788acda3161acab0
+    REF 8dc3e0c19bc570c453d1a7777b8be94f4b11bd29
+    SHA512 f02fddb29efebd4d4277e42dc388ad74dd44dab37a16dd05314cb6333e86f9529f9a183664e9961f9f68c2253f055fc8ea2ed20b89c7d166c1fb48252f2845f3
     HEAD_REF master
 )
 
