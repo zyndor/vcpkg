@@ -1,0 +1,11 @@
+diff -ruN1 a/build/tizen/CMakeLists.txt b/build/tizen/CMakeLists.txt
+--- a/build/tizen/CMakeLists.txt	2020-04-24 16:01:43.000000000 +0100
++++ b/build/tizen/CMakeLists.txt	2020-04-27 15:24:48.870485700 +0100
+@@ -310,7 +310,2 @@
+ IF( INSTALL_CMAKE_MODULES )
+-  IF( ENABLE_DEBUG )
+-    SET( BIN_DIR "${BIN_DIR}/debug" )
+-    SET( LIB_DIR "${LIB_DIR}/debug" )
+-  ENDIF()
+-
+   # Install the library files.
