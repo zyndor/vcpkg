@@ -1,9 +1,11 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
-    REPO dalihub/dali-adaptor
-    REF 1ce95fd2b15b9fdc8657e853a68488ca3730160d
-    SHA512 756266291d57f9027baa3e2275bfff3e909788b28f984f596034d619b864ebfcab5bc5bfe07bad77c7f8656582c2d13a82155d34c8c41b487b539e7fd8566f76
-    HEAD_REF master
+    REPO vcebollada/dali-adaptor
+    REF 04cfb7ed509a0b3055ad6cd72e474eb69f07ae2c
+    SHA512 3062c886e9f52e549b30377ba36d460a97ad6fbb7efe0fde9300e9be00c89c7ef991567c4c9cbf48eeaad7ddbefcc8156a73c76147fe67a4ac6271b1476abb0f
+    HEAD_REF vcpkg
+    PATCHES
+	001-VCPKG-makefile.patch
 )
 
 if(VCPKG_LIBRARY_LINKAGE STREQUAL "dynamic")
