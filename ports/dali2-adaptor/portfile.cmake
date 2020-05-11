@@ -1,8 +1,8 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
-    REPO vcebollada/dali-core
-    REF cadc79a7e351e217efd59ac4f95a4c12e7936fc9
-    SHA512 f22c5c6f8dd7823583c98ff919bad4f033efa6b3cc96761f539bd5ee29c45b4cc71622668646a1daa2288528b05504603763704a0bf2090b8110e4c73c915804
+    REPO dalihub/dali-adaptor
+    REF aae7fc2e82002f618e53db160e467b42a7994b2e
+    SHA512 c49c81d4ac865175109108bef0b215c74549c68f1fe66f546c829a55009e0e71d627d5f38f2f0c8a4f8fc958d786386bf06d6b7f29de4b8f2fdff43f80f8be9a
     HEAD_REF vcpkg
     PATCHES
 	001-VCPKG-makefile.patch
@@ -14,7 +14,8 @@ else()
   set(VCPKG_BUILD_SHARED_LIBS OFF)
 endif()
 
-set( CORE_OPTIONS
+set( ADAPTOR_OPTIONS
+       -DPROFILE_LCASE=windows
        -DENABLE_PKG_CONFIGURE=OFF
        -DENABLE_LINK_TEST=OFF
        -DINSTALL_CMAKE_MODULES=ON
@@ -24,7 +25,7 @@ set( CORE_OPTIONS
 vcpkg_configure_cmake(
     SOURCE_PATH "${SOURCE_PATH}/build/tizen"
     PREFER_NINJA
-    OPTIONS ${CORE_OPTIONS}
+    OPTIONS ${ADAPTOR_OPTIONS}
 )
 
 vcpkg_install_cmake()
@@ -41,4 +42,4 @@ vcpkg_copy_pdbs()
 # Copy the cmake configuration files to the 'installed' folder
 file( COPY "${CURRENT_PACKAGES_DIR}/share" DESTINATION ${CURRENT_INSTALLED_DIR} )
 
-vcpkg_test_cmake(PACKAGE_NAME dali-core MODULE)
+vcpkg_test_cmake(PACKAGE_NAME dali-adaptor MODULE)
