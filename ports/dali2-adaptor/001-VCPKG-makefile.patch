@@ -1,11 +1,15 @@
-diff -ruN1 a/build/tizen/CMakeLists.txt b/build/tizen/CMakeLists.txt
---- a/build/tizen/CMakeLists.txt	2020-04-24 16:01:29.000000000 +0100
-+++ b/build/tizen/CMakeLists.txt	2020-04-27 15:20:09.481499700 +0100
-@@ -193,7 +193,2 @@
+diff -ruN1 00161c69b7-ad29900f4c.original/build/tizen/CMakeLists.txt 00161c69b7-ad29900f4c/build/tizen/CMakeLists.txt
+--- a/build/tizen/CMakeLists.txt	2020-07-20 11:01:21.322887800 +0100
++++ b/build/tizen/CMakeLists.txt	2020-07-20 11:01:35.362788300 +0100
+@@ -193,6 +193,2 @@
  IF( INSTALL_CMAKE_MODULES )
 -  IF( ENABLE_DEBUG )
 -    SET( BIN_DIR "${BIN_DIR}/debug" )
 -    SET( LIB_DIR "${LIB_DIR}/debug" )
 -  ENDIF()
--
-   # Install the library files.
+ 
+@@ -222,3 +218,3 @@
+   IF( ENABLE_DEBUG )
+-    install( FILES ${CMAKE_CURRENT_BINARY_DIR}/Debug/${name}.pdb DESTINATION ${BIN_DIR} )
++    install( FILES ${CMAKE_CURRENT_BINARY_DIR}/${name}.pdb DESTINATION ${BIN_DIR} )
+   ENDIF()
