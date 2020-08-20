@@ -1,14 +1,22 @@
-diff -ruN1 a1a91ec3cd-9ebfa11545.original/build/tizen/CMakeLists.txt a1a91ec3cd-9ebfa11545/build/tizen/CMakeLists.txt
---- a/build/tizen/CMakeLists.txt	2020-07-20 11:12:27.172105300 +0100
-+++ b/build/tizen/CMakeLists.txt	2020-07-20 11:13:20.148104800 +0100
-@@ -317,6 +317,2 @@
+diff -ruN1 a/build/tizen/CMakeLists.txt b/build/tizen/CMakeLists.txt
+--- a/build/tizen/CMakeLists.txt	2020-08-19 10:32:58.552210200 +0100
++++ b/build/tizen/CMakeLists.txt	2020-08-19 14:37:43.760405500 +0100
+@@ -113,6 +113,3 @@
+   IF( USE_DEFAULT_RESOURCE_DIR )
+-    SET( INSTALL_SHARE_DIR "${PREFIX}/share" )
+-    IF( VCPKG_TOOLKIT_BUILD )
+-      SET( INSTALL_SHARE_DIR "${_VCPKG_INSTALLED_DIR}/${VCPKG_TARGET_TRIPLET}/share" )
+-    ENDIF()
++    SET( INSTALL_SHARE_DIR "${_VCPKG_INSTALLED_DIR}/${VCPKG_TARGET_TRIPLET}/share" )
+ 
+@@ -319,6 +316,2 @@
  IF( INSTALL_CMAKE_MODULES )
 -  IF( ENABLE_DEBUG )
 -    SET( BIN_DIR "${BIN_DIR}/debug" )
 -    SET( LIB_DIR "${LIB_DIR}/debug" )
 -  ENDIF()
  
-@@ -346,3 +342,3 @@
+@@ -348,3 +341,3 @@
    IF( ENABLE_DEBUG )
 -    install( FILES ${CMAKE_CURRENT_BINARY_DIR}/Debug/${name}.pdb DESTINATION ${BIN_DIR} )
 +    install( FILES ${CMAKE_CURRENT_BINARY_DIR}/${name}.pdb DESTINATION ${BIN_DIR} )
