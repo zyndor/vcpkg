@@ -1,5 +1,5 @@
 Source: dali2-adaptor
-Version: 1.9.24
+Version: 1.9.26
 Homepage: https://github.com/dalihub/dali-adaptor
 Description: DALi: Dynamic Animation Library - adaptor
 Build-Depends: winsock2, pthreads, curl, getopt-win32, libexif, libjpeg-turbo, libpng, giflib, angle, cairo, fontconfig, freetype, harfbuzz, fribidi, libwebp, dali2-core

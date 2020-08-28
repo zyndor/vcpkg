@@ -1,5 +1,5 @@
 Source: dali2-core
-Version: 1.9.24
+Version: 1.9.26
 Homepage: https://github.com/dalihub/dali-core
 Description: DALi: Dynamic Animation Library - core
 Build-Depends: dali-windows-dependencies
