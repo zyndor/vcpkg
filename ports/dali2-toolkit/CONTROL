@@ -1,5 +1,5 @@
 Source: dali2-toolkit
-Version: 1.9.24
+Version: 1.9.26
 Homepage: https://github.com/dalihub/dali-toolkit
 Description: DALi: Dynamic Animation Library - toolkit
 Build-Depends: dali2-adaptor
