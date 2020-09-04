@@ -9,8 +9,8 @@ find_package(Freetype REQUIRED)
 find_package(EXPAT REQUIRED)
 
 add_library(fontconfig
+    src/fcarch.c
     src/fcatomic.c
-    src/fcblanks.c
     src/fccache.c
     src/fccfg.c
     src/fccharset.c
@@ -21,6 +21,7 @@ add_library(fontconfig
     src/fcformat.c
     src/fcfreetype.c
     src/fcfs.c
+    src/fchash.c
     src/fcinit.c
     src/fclang.c
     src/fclist.c
@@ -29,6 +30,7 @@ add_library(fontconfig
     src/fcname.c
     src/fcobjs.c
     src/fcpat.c
+    src/fcptrlist.c
     src/fcrange.c
     src/fcserialize.c
     src/fcstat.c
