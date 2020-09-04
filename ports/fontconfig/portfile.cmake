@@ -1,18 +1,20 @@
 
 include(vcpkg_common_functions)
 
-set(FONTCONFIG_VERSION 2.12.4)
+set(FONTCONFIG_VERSION 2.13.92)
 vcpkg_download_distfile(ARCHIVE
     URLS "https://www.freedesktop.org/software/fontconfig/release/fontconfig-${FONTCONFIG_VERSION}.tar.gz"
     FILENAME "fontconfig-${FONTCONFIG_VERSION}.tar.gz"
-    SHA512 2be3ee0e8e0e3b62571135a3cae06e456c289dd1ad40ef2a7c780406418ee5efce863a833eca5a8ef55bc737a0ea04ef562bba6fd27e174ae43e42131b52810d
+    SHA512 bc6719c04489c3baba9c59ee722a2fce2707f92f95432ab2c00d3f13353c603ccd1c43f751231a42c22fac7908561f7efe734718142061934e9809cac9b6071d
 )
 
 vcpkg_extract_source_archive_ex(
     OUT_SOURCE_PATH SOURCE_PATH
     ARCHIVE ${ARCHIVE}
     REF ${FONTCONFIG_VERSION}
-    PATCHES fcobjtypehash.patch
+    PATCHES
+      fcobjtypehash.patch
+      0002_[fontconfig]_SourceCompileFix.patch
 )
 
 file(COPY ${CMAKE_CURRENT_LIST_DIR}/CMakeLists.txt DESTINATION ${SOURCE_PATH})
