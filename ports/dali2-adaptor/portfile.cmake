@@ -6,6 +6,7 @@ vcpkg_from_github(
     HEAD_REF vcpkg
     PATCHES
 	001-VCPKG-makefile.patch
+	002-astc-third-party-files-added.patch
 )
 
 if(VCPKG_LIBRARY_LINKAGE STREQUAL "dynamic")
