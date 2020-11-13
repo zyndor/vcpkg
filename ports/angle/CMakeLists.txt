@@ -251,6 +251,11 @@ file(GLOB LIBANGLE_SOURCES
 )
 list(FILTER LIBANGLE_SOURCES EXCLUDE REGEX "_unittest")
 
+# This fixes a compile error. The alternative would be to enable frame capture
+# (except we don't really need it). Source:
+# https://android.googlesource.com/device/generic/vulkan-cereal/+/refs/heads/master/third-party/angle/doc/CaptureAndReplay.md
+list(FILTER LIBANGLE_SOURCES EXCLUDE REGEX "src/libANGLE/FrameCapture.cpp")
+
 if(LINUX OR APPLE)
     set(LIBANGLE_RENDERER_PLATFORM
         angle::renderer::opengl
@@ -317,6 +322,8 @@ list(APPEND LIBGLESV2_SOURCES
   "src/libGLESv2/entry_points_gles_3_0_autogen.h"
   "src/libGLESv2/entry_points_gles_3_1_autogen.cpp"
   "src/libGLESv2/entry_points_gles_3_1_autogen.h"
+  "src/libGLESv2/entry_points_gles_3_2_autogen.cpp"
+  "src/libGLESv2/entry_points_gles_3_2_autogen.h"
   "src/libGLESv2/entry_points_gles_ext_autogen.cpp"
   "src/libGLESv2/entry_points_gles_ext_autogen.h"
   "src/libGLESv2/global_state.cpp"
@@ -370,7 +377,9 @@ if(NOT DISABLE_INSTALL_HEADERS)
     install(
         DIRECTORY include/
         DESTINATION include
-        FILES_MATCHING PATTERN "*.h"
+        FILES_MATCHING
+        PATTERN "*.h"
+        PATTERN "*.inc"
         PATTERN "GLSLANG" EXCLUDE
         PATTERN "EGL" EXCLUDE
         PATTERN "KHR" EXCLUDE

@@ -19,10 +19,10 @@ endif()
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO google/angle
-    REF 8f08fed925c54835c4faee4d7dd61d6ed2964ffd
-    SHA512 037ebe356371924088563180c4a37a31eaffa41ca21c42554391672c28e62fabc19d787516b88baa192b771e05c370c5a6cfec0863b70e08d65216f41d89923f
+    REF aa292a59f9f222535c2ff34d8eecbe3cce039664
+    SHA512 9299f40d8abaddc2f82bc45a988670e1b57cbb26993814d894fee06d6af11c5858fcca2499a34bbaf634eefa57ee1e11e9fecd72ff661218cd9c4ab1b04225d2
     PATCHES 
-        001-fix-uwp.patch
+        001-fix-windows-define-far.patch
 )
 
 file(COPY ${CMAKE_CURRENT_LIST_DIR}/CMakeLists.txt DESTINATION ${SOURCE_PATH})
